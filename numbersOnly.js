@@ -27,7 +27,9 @@ function numbersOnly(newArray) {
       console.log(newArray);
     }
   }
+
   console.log(numArray);
+
 }
 
-numbersOnly(1, 2, 3)
+// numbersOnly(1, 2, 3)
