@@ -21,19 +21,24 @@ function numbersOnly(newArray) {
   var numArray = [];
 
   for (var i = 0; i < newArray.length; i++) {
+
     // Notice syntax of if and typeof
     // Double quotes suck!!!! "number"
+ // if typeof(newArray(i)) === "number" {
     if (typeof newArray[i] === 'number') {
+
       numArray.push(i);
-      // console.log(numArray);
-      // console.log(newArray);
+
     }
+
   }
+
   console.log(numArray);
+
 }
 
 // Was
 // numbersOnly(1, 2, 3);
 
 // Should be
-// numbersOnly([1,2,3]);
+numbersOnly([1,2,3]);
