@@ -17,6 +17,41 @@ Make a second function that removes them from the given array. (instead of copyi
 Do you need to return the array?
 */
 
+// CONECPT of a function returning a value
+function one(){
+
+  return 'ONE';
+
+  // Nothing after 'return' gets executed
+  console.log('THIS WILL NOT WORK!');
+
+}
+
+var testOne = one();
+console.log('testOne =',testOne); // Will output 'testOne = ONE'
+console.log("\n");
+
+
+
+
+function two(inputValue){
+
+  var newValue = inputValue * 5;
+
+  return newValue;
+
+  // Nothing after 'return' gets executed
+  console.log('THIS WILL NOT WORK!');
+
+}
+
+var originalValue = 36
+var testTwo = two(originalValue);
+// 'testTwo' now equals 180, but 'originalValue' does not change
+console.log('originalValue =',originalValue); // Will output 'originalValue = 180'
+console.log('testTwo =',testTwo);             // Will output 'testTwo = ONE'
+console.log("\n");
+
 // function numbersOnly(newArray) {
 // "array" is the argument or "input", not the new array
 function numbersOnly(array) {
