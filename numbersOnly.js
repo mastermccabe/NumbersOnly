@@ -21,8 +21,13 @@ function numbersOnly(newArray) {
   var numArray = [];
 
   for (var i = 0; i < newArray.length; i++) {
-    if (typeof(newArray(i)) === "number")
+    if typeof(newArray(i)) === "number" {
       numArray.push(i);
+      console.log(numArray);
+      console.log(newArray);
+    }
   }
   console.log(numArray);
 }
+
+numbersOnly(1, 2, 3)
