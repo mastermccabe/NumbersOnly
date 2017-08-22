@@ -61,6 +61,7 @@ Number.prototype.timesFive = function(){
 };
 console.log('PROTOTYPE: originalValue =',originalValue); // Will output 'PROTOTYPE: originalValue = 36'
 console.log('PROTOTYPE: originalValue =',originalValue.timesFive()); // Will output 'PROTOTYPE: originalValue = 180', 'originalValue' won't change
+console.log('PROTOTYPE BONUS EXAMPLE:',(100).timesFive());
 console.log("\n");
 
 // function numbersOnly(newArray) {
