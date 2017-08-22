@@ -25,8 +25,8 @@ function numbersOnly(newArray) {
     // Double quotes suck!!!! "number"
     if (typeof newArray[i] === 'number') {
       numArray.push(i);
-      console.log(numArray);
-      console.log(newArray);
+      // console.log(numArray);
+      // console.log(newArray);
     }
   }
   console.log(numArray);
