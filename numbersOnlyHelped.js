@@ -34,7 +34,7 @@ console.log("\n");
 
 
 
-function two(inputValue){
+function timesFive(inputValue){
 
   var newValue = inputValue * 5;
 
@@ -46,10 +46,22 @@ function two(inputValue){
 }
 
 var originalValue = 36
-var testTwo = two(originalValue);
+var testTwo = timesFive(originalValue);
 // 'testTwo' now equals 180, but 'originalValue' does not change
 console.log('originalValue =',originalValue); // Will output 'originalValue = 180'
 console.log('testTwo =',testTwo);             // Will output 'testTwo = ONE'
+console.log("\n");
+
+// This is refered to as an extension, or prototype method
+// This creates an 'add-on' function
+Number.prototype.timesFive = function(){
+
+  return this * 5;
+
+};
+// the 'originalValue' will change
+console.log('PROTOTYPE: originalValue =',originalValue); // Will output 'PROTOTYPE: originalValue = 36'
+console.log('PROTOTYPE: originalValue =',originalValue.timesFive()); // Will output 'PROTOTYPE: originalValue = 180', 'originalValue' won't change
 console.log("\n");
 
 // function numbersOnly(newArray) {
