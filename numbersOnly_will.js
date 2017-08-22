@@ -16,29 +16,62 @@ Bonus (Only If You Have Time):
 Make a second function that removes them from the given array. (instead of copying to a new array)
 Do you need to return the array?
 */
-function numbersOnly(newArray) {
 
-  var numArray = [];
+// MAIN TASK
+// :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:
+// :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:
+function numbersOnly(array) {
 
-  for (var i = 0; i < newArray.length; i++) {
+  var newArray = [];
 
-    // Notice syntax of if and typeof
-    // Double quotes suck!!!! "number"
- // if typeof(newArray(i)) === "number" {
-    if (typeof newArray[i] === 'number') {
+  for (var i = 0; i < array.length; i++) {
 
-      numArray.push(i);
+    if (typeof array[i] === 'number') {
+
+      newArray.push(array[i]);
 
     }
 
   }
 
-  console.log(numArray);
+  return newArray
 
 }
+// :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:
+// :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:
 
-// Was
-// numbersOnly(1, 2, 3);
 
-// Should be
-numbersOnly([1,2,3]);
+// BONUS
+// :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:
+// :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:
+Array.prototype.numbersOnly = function(){
+
+  for (var i = 0; i < this.length; i++) {
+
+    if (typeof this[i] != 'number') {
+
+      this.splice(i,1);
+
+    }
+
+  }
+
+};
+// :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:
+// :-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:-:
+
+// Original Array
+var originalArray = [1, 'apple', -3, 'orange', 0.5];
+
+// MAIN TASK
+console.log('MAIN TASK:');
+
+console.log('Original:',originalArray);
+console.log('New:',numbersOnly(originalArray));
+
+// BONUS
+console.log("\nBONUS:");
+
+console.log('Original:',originalArray);
+originalArray.numbersOnly()
+console.log('New:',originalArray);
